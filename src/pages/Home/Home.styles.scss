@@ -1,0 +1,245 @@
+
+section {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#sec-2 {
+  background-color: rgb(248, 245, 214);
+}
+
+.scroll-down {
+  justify-self: end;
+  height: 50px;
+  width: 30px;
+  border: 3px solid #d8d0ae;
+  border-radius: 50px;
+  cursor: pointer;
+  transform: translateX(-50%);
+  align-self: center;
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    height: 10px;
+    width: 10px;
+    transform: translate(-50%, -100%) rotate(45deg);
+    border: 3px solid #d8d0ae;
+    border-top: transparent;
+    border-left: transparent;
+    animation: scroll-down 1s ease-in-out infinite;
+  }
+
+  &::before {
+    top: 30%;
+    animation-delay: 0.3s;
+  }
+}
+
+@keyframes scroll-down {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    top: 90%;
+    opacity: 0;
+  }
+}
+
+.pages-home {
+  .intro {
+    background: linear-gradient(to right, #d8d0ae 0%, #d8d0ae 65%, #162640 65%, #162640 100%);
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    padding: 80px 40px 60px 40px;
+  }
+
+  .font {
+    flex: 1;
+    color: #162640;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: 0.04em;
+    align-content: center;
+    font-size: 1.5vw;
+    padding-right: 40px;
+    
+    p {
+      font-size: 1em;
+      margin-bottom: 20px;
+    }
+    
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+    }
+  }
+
+  .douglas {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      width: 100%;
+      max-width: 500px;
+      margin-left: -25vw;
+    }
+  }
+
+  .font-2 {
+    flex-basis: 100%;
+    color: #162640;
+    font-weight: 600;
+    font-size: 1.5vw;
+    line-height: 1.5;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px;
+    
+  }
+  .about-me{
+    flex-direction: row;
+    color: #162640;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 80px 40px 60px 40px;
+    background-color: #d8d0ae;
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+    }
+    .about-me > div {
+      flex: 1;
+      padding: 20px;
+    }
+    
+    .about-me > div:not(:last-child) {
+      border-right: 4px solid #162640; 
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .font {
+    font-size: 1.2em !important;
+    margin-left: 6vw;
+    margin-right: 6vw;
+    
+    p {
+      width: 500px;
+    }
+  }
+
+  .font-2 {
+    margin-left: 6vw;
+    margin-right: 6vw;
+    font-size: 1em !important;
+    
+    p {
+      width: 350px;
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .scroll-down {
+    border: 2px solid #d8d0ae;
+  }
+  .douglas {
+    img {
+      margin-left: -19vw !important;
+    }
+  }
+  
+  .font-2 {
+    font-size: 0.7em !important;
+  }
+
+  .font {
+    font-size: 0.7em !important;
+    
+    p {
+      width: 200px;
+    }
+  }
+}
+
+@media screen and (max-width: 530px) {
+  .pages-home {
+    .intro {
+      //background: linear-gradient(to right, #d8d0ae 0%, #d8d0ae 65%, #162640 65%, #162640 100%);
+      background: #d8d0ae;
+      flex-flow: column;
+      padding: 0 0 0 0 ;
+    }
+    .font{
+      padding-right: 0;
+      padding: 150px 20px 60px 20px ;
+      p {
+        font-size: 1.3em;
+        width: 100%;
+      }
+      background: #162640;
+      color: #d8d0ae;
+    }
+    .font-2 {
+      padding: 20px 20px 50px 20px;
+      color: #162640;
+      grid-template-columns: repeat(2, 1fr);
+      p {
+        font-size: 1.3em;
+        width: 100%;
+      }
+      a{
+      grid-column: span 2;
+      justify-self: center;
+      }
+    }
+
+    .scroll-down{
+      margin-left: 20px;
+      border: 2px solid #162640;
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        height: 10px;
+        width: 10px;
+        transform: translate(-50%, -100%) rotate(45deg);
+        border: 3px solid #162640;
+        border-top: transparent;
+        border-left: transparent;
+        animation: scroll-down 1s ease-in-out infinite;
+      }
+      &::before {
+        top: 30%;
+        animation-delay: 0.3s;
+      }
+    }
+    .douglas {
+      img {
+        max-width: 250px;
+        margin-left: 0 !important;
+      }
+    }
+  }
+}
