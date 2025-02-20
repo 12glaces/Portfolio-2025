@@ -2,15 +2,17 @@ import React from "react";
 import Douglas from "../../assets/Douglas.png";
 import "./Home.styles.scss";
 import Contact from "../../components/Contact/Contact";
+import Footer from "../../components/Footer/Footer";
 const Home = () => {
-  //w-3/12
   return (
     <div className="pages-home">
       <div className="intro">
         <div className="text-xl font">
           <h1>Developer Fullstack.</h1>
           <p>
-          Passionné par le développement frontend et backend, je crée des solutions innovantes et sur mesure avec l’objectif d’offrir une expérience utilisateur au top.
+            Passionné par le développement web, je crée des solutions innovantes
+            et sur mesure avec l’objectif d’offrir une expérience utilisateur au
+            top.
           </p>
         </div>
         <div className="text-center douglas">
@@ -18,44 +20,46 @@ const Home = () => {
         </div>
         <div className=" font-2">
           <p>
-            Expert en développement frontend et backend, toujours à la recherche de solutions efficaces et innovantes pour créer des applications performantes et intuitives.
+            Toujours à la recherche de solutions efficaces et innovantes pour
+            créer des applications performantes et intuitives.
           </p>
           <p>
-            Si tu cherches quelqu’un pour donner vie à ton projet, parlons-en ! 🚀
+            Si tu cherches quelqu’un pour donner vie à ton projet, parlons-en !
+            🚀
           </p>
           <a href="#about-me">
-          <div className="scroll-down"></div>
-            
+            <div className="scroll-down"></div>
           </a>
         </div>
       </div>
       <section id="about-me">
-        <div className="container about-me">
-          <div>
-          <h1>This is Sec 2</h1>
+        <div className="about-me">
+          <div className="left">
+            <h1>Mon approche</h1>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-              pulvinar, ligula a ultricies volutpat, velit erat pretium nunc, nec
-              bibendum tortor erat in neque. Integer in est nec libero
-              consectetur fermentum. Donec euismod, lac
+              Développer, c’est avant tout une histoire de logique et de fun.
+              Mon but ? Créer des apps qui tournent comme une horloge, tout en
+              étant faciles à comprendre et à améliorer. Avec React sous le bras, je suis prêt à attaquer n’importe quel
+              projet.
             </p>
           </div>
-          <div>
-          <h1>This is Sec 2</h1>
+          <div className="right">
+            <h1>Technologies</h1>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-              pulvinar, ligula a ultricies volutpat, velit erat pretium nunc, nec
-              bibendum tortor erat in neque. Integer in est nec libero
-              consectetur fermentum. Donec euismod, lac
+              Alors, qu'est-ce que je fais ? Je passe mes journées à jongler
+              entre React, TypeScript et ViteJS dans VSCode – mon terrain de jeu
+              préféré. Je gère tout ça sur GitHub avec le versioning, histoire
+              de ne jamais perdre une ligne de code.
             </p>
           </div>
         </div>
       </section>
       <section id="contact">
-        <div className="container contact">
+        <div className="contact">
           <Contact />
         </div>
       </section>
+      <Footer />
     </div>
   );
 };

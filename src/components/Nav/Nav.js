@@ -35,14 +35,11 @@ const Nav = () => {
           </HashLink>
 
           <div className="hidden md:flex space-x-4 nav-links first-nav">
-            <HashLink to="/#top" className="px-3 py-2 rounded-md text-sm font-medium">
-              Home
-            </HashLink>
             <HashLink
               to="/#about-me"
               className="px-3 py-2 rounded-md text-sm font-medium"
             >
-              About
+              À propos
             </HashLink>
             <Link
               to="/services"

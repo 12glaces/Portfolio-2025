@@ -44,32 +44,34 @@ const Contact = () => {
 
   return (
     <div className="contact-container">
-      <h2>Contact Us</h2>
-      <p>Feel free to reach out by filling out the form below.</p>
+      <div className="contact-form-wrapper">
+        <h2>Contactez Moi</h2>
+        <p>Envoyez moi un message et je vous réponds au plus vite.</p>
 
-      {isSent && <p className="success-message">Message sent successfully!</p>}
-      {errorMessage && <p className="error-message">{errorMessage}</p>}
+        {isSent && <p className="success-message">Message sent successfully!</p>}
+        {errorMessage && <p className="error-message">{errorMessage}</p>}
 
-      <form ref={form} onSubmit={sendEmail} className="contact-form">
-        <label htmlFor="name">Name</label>
-        <input type="text" id="name" name="user_name" required />
+        <form ref={form} onSubmit={sendEmail} className="contact-form">
+          <label htmlFor="name">Nom</label>
+          <input type="text" id="name" name="user_name" required />
 
-        <label htmlFor="email">Email</label>
-        <input type="email" id="email" name="user_email" required />
+          <label htmlFor="email">E-mail</label>
+          <input type="email" id="email" name="user_email" required />
 
-        <label htmlFor="message">Message</label>
-        <textarea id="message" name="message" required />
+          <label htmlFor="message">Message</label>
+          <textarea id="message" name="message" required />
 
-        <div className="captcha-container">
-          <HCaptcha
-            sitekey={process.env.REACT_APP_HCAPTCHA_SITE_KEY}
-            onVerify={(token) => setCaptchaToken(token)}
-            ref={captchaRef}
-          />
-        </div>
+          <div className="captcha-container">
+            <HCaptcha
+              sitekey={process.env.REACT_APP_HCAPTCHA_SITE_KEY}
+              onVerify={(token) => setCaptchaToken(token)}
+              ref={captchaRef}
+            />
+          </div>
 
-        <input type="submit" value="Send" disabled={!captchaToken} />
-      </form>
+          <input type="submit" value="Envoyer" disabled={!captchaToken} />
+        </form>
+      </div>
     </div>
   );
 };

@@ -1,11 +1,36 @@
 @tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html {
     scroll-behavior: smooth !important;
     scroll-Amount: 0;
 }
-@tailwind components;
-@tailwind utilities;
 
-body{
+body {
     background-color: rgb(248, 245, 214);
 }
+
+// Global Color Variables
+:root {
+    --primary-color: #162640;
+    --secondary-color: #9d977f;
+    --text-color: #fff;
+    --background-color: #f8f8f8;
+    --border-color: #9d977f;
+    --accent-color: #d8d0ae; 
+    --hover-color: #b3ac8e;
+    --button-hover: #203355;
+    --link-hover: #d8d0ae;
+    --form-background: #eeeeee;
+    --input-background: #fff;
+    --input-border: #ccc;
+    --button-bg: #c2b799;
+    --button-text: #162640;
+    --button-border: #9d977f;
+    --shadow-light: rgba(0, 0, 0, 0.1);
+    --shadow-dark: rgba(0, 0, 0, 0.3);
+    --highlight-color: #fffef8;
+}
+
+
