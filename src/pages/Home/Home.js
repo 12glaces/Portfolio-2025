@@ -26,7 +26,7 @@ const Home = () => {
         >
           <div className="w-max">
             <h1 className="animate-typing overflow-hidden whitespace-nowrap border-r-4 border-transparent pr-5 text-5xl text-white font-bold">
-              Dévelopeur Fullstack.
+              Développeur Web.
             </h1>
           </div>
           <p>
