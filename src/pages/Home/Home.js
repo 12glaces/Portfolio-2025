@@ -1,24 +1,52 @@
 import React from "react";
+import { motion } from "framer-motion";
 import Douglas from "../../assets/Douglas.png";
 import "./Home.styles.scss";
 import Contact from "../../components/Contact/Contact";
 import Footer from "../../components/Footer/Footer";
+import AboutMe from "../../components/AboutMe/AboutMe";
+import Timeline from "../../components/Timeline/Timeline";
+
 const Home = () => {
   return (
     <div className="pages-home">
-      <div className="intro">
-        <div className="text-xl font">
-          <h1>Developer Fullstack.</h1>
+      <motion.div
+        className="intro"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        viewport={{ once: false }}
+      >
+        <motion.div
+          className="text-xl font"
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+          viewport={{ once: false }}
+        >
+          <div className="w-max">
+            <h1 className="animate-typing overflow-hidden whitespace-nowrap border-r-4 border-transparent pr-5 text-5xl text-white font-bold">
+              Developer Fullstack.
+            </h1>
+          </div>
           <p>
             Passionné par le développement web, je crée des solutions innovantes
             et sur mesure avec l’objectif d’offrir une expérience utilisateur au
             top.
           </p>
-        </div>
+        </motion.div>
+
         <div className="text-center douglas">
           <img src={Douglas} alt="Douglas Face" />
         </div>
-        <div className=" font-2">
+
+        <motion.div
+          className="font-2"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 0.6 }}
+          viewport={{ once: false }}
+        >
           <p>
             Toujours à la recherche de solutions efficaces et innovantes pour
             créer des applications performantes et intuitives.
@@ -27,38 +55,44 @@ const Home = () => {
             Si tu cherches quelqu’un pour donner vie à ton projet, parlons-en !
             🚀
           </p>
-          <a href="#about-me">
+        </motion.div>
+      </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+        viewport={{ once: false }}
+      >
+        <div className="scroll-down-container">
+        <a href="#about-me">
             <div className="scroll-down"></div>
           </a>
         </div>
-      </div>
-      <section id="about-me">
-        <div className="about-me">
-          <div className="left">
-            <h1>Mon approche</h1>
-            <p>
-              Développer, c’est avant tout une histoire de logique et de fun.
-              Mon but ? Créer des apps qui tournent comme une horloge, tout en
-              étant faciles à comprendre et à améliorer. Avec React sous le bras, je suis prêt à attaquer n’importe quel
-              projet.
-            </p>
-          </div>
-          <div className="right">
-            <h1>Technologies</h1>
-            <p>
-              Alors, qu'est-ce que je fais ? Je passe mes journées à jongler
-              entre React, TypeScript et ViteJS dans VSCode – mon terrain de jeu
-              préféré. Je gère tout ça sur GitHub avec le versioning, histoire
-              de ne jamais perdre une ligne de code.
-            </p>
-          </div>
-        </div>
-      </section>
-      <section id="contact">
+        <AboutMe />
+      </motion.div>
+      
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+        viewport={{ once: false }}
+      ><Timeline />
+      </motion.div>
+      
+
+      <motion.section
+        id="contact"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
+        viewport={{ once: false }}
+      >
         <div className="contact">
           <Contact />
         </div>
-      </section>
+      </motion.section>
+
       <Footer />
     </div>
   );

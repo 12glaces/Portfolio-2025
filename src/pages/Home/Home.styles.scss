@@ -1,20 +1,26 @@
 section {
-  min-height: 100vh;
   width: 100%;
   display: flex;
-  align-items: center;
   justify-content: center;
 }
 
 #sec-2 {
   background-color: var(--background-color);
 }
+.scroll-down-container {
+  place-self: center;
+  padding: 50px;
+  display: -webkit-flex;
+display: -moz-flex;
+display: flex;
 
+justify-content: center;
+}
 .scroll-down {
   justify-self: end;
   height: 50px;
   width: 30px;
-  border: 3px solid var(--accent-color);
+  border: 3px solid var(--primary-color);
   border-radius: 50px;
   cursor: pointer;
   transform: translateX(-50%);
@@ -29,7 +35,7 @@ section {
     height: 10px;
     width: 10px;
     transform: translate(-50%, -100%) rotate(45deg);
-    border: 3px solid var(--accent-color);
+    border: 3px solid var(--primary-color);
     border-top: transparent;
     border-left: transparent;
     animation: scroll-down 1s ease-in-out infinite;
@@ -58,6 +64,10 @@ section {
 }
 
 .pages-home {
+  h1 {
+    color: var(--primary-color);
+    //border-color: var(--primary-color)!important;
+  }
   .intro {
     background: linear-gradient(
       to right,
@@ -119,17 +129,17 @@ section {
   }
 
   .about-me {
-    margin:200px 0 20px 0;
+    margin: 2vh 0 20px 0;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto auto auto;
     grid-row-gap: 20px;
     padding: 80px 40px 60px 40px;
-    background-color: var(--accent-color);
+    //background-color: var(--accent-color);
     width: 100%;
     color: var(--primary-color);
-    
-    h1{
+
+    h1 {
       font-size: 3em;
       font-weight: 600;
       padding: 0 20px 20px 0;
@@ -147,7 +157,7 @@ section {
 
     .right {
       grid-column: 2;
-      grid-row: 4;
+      grid-row: 2;
       padding: 20px;
       letter-spacing: 0.03em;
       font-weight: 500;
@@ -161,14 +171,29 @@ section {
 
       .left,
       .right {
+        p {
+          font-size: 0.9em;
+        }
+        h1 {
+          font-size: 2em;
+        }
         grid-column: 1;
         grid-row: auto;
       }
     }
   }
 }
-.contact{
+.contact {
   width: 100%;
+}
+
+
+@media screen and (max-width: 1200px) {
+  .font {
+    p {
+      max-width: 400px;
+    }
+  }
 }
 @media screen and (min-width: 1200px) {
   .font {
@@ -216,7 +241,7 @@ section {
   }
 }
 
-@media screen and (max-width: 530px) {
+@media screen and (max-width: 720px) {
   .pages-home {
     .intro {
       background: var(--accent-color);
@@ -275,7 +300,11 @@ section {
         animation-delay: 0.3s;
       }
     }
-
+    .intro {
+      h1 {
+        color: var(--accent-color);
+      }
+    }
     .douglas {
       img {
         max-width: 250px;

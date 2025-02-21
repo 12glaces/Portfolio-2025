@@ -1,0 +1,118 @@
+#experience {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--primary-color);
+  padding: 40px;
+
+  .timeline-item {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 50px;
+    position: relative;
+    max-width: 900px;
+
+    .timeline-circle {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background-color: var(--accent-color);
+      border: 2px solid var(--secondary-color);
+      position: absolute;
+      top: 0;
+      left: -45px;
+    }
+
+    .timeline-line {
+      width: 2px;
+      height: 100%;
+      background-color: var(--secondary-color); 
+      position: absolute;
+      top: 30px;
+      left: -1px;
+    }
+
+    .timeline-content {
+      margin-left: 50px;
+      background-color: var(--primary-color);
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 900px;
+      width: 700px;
+      box-shadow: var(--shadow-light);
+      position: relative;
+      transition: all 0.3s ease-in-out;
+      
+      &:hover {
+        //box-shadow: 0 5px 5px var(--shadow-dark);
+        transform: scale(1.02);
+      }
+
+      .timeline-year {
+        font-size: 1.5em;
+        color: var(--accent-color);
+        font-weight: bold;
+      }
+
+      .timeline-role {
+        font-size: 1.8em;
+        color: var(--text-color);
+        margin-top: 10px;
+        font-weight: bold;
+      }
+
+      .timeline-company-location {
+        font-size: 1.2em;
+        color: var(--accent-color);
+        margin-top: 5px;
+      }
+
+      .timeline-responsibilities {
+        margin-top: 20px;
+        font-size: 1.1em;
+        color: var(--text-color);
+        ul {
+          padding-left: 20px;
+          list-style-type: disc;
+          li {
+            margin-bottom: 10px;
+          }
+        }
+      }
+
+      .timeline-projects {
+        margin-top: 20px;
+        font-size: 1.1em;
+        color: var(--text-color);
+        h4 {
+          font-weight: bold;
+          color: var(--accent-color);
+        }
+        ul {
+          padding-left: 20px;
+          list-style-type: square;
+          li {
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .timeline-item {
+      flex-direction: column;
+      align-items: center;
+
+      .timeline-circle {
+        left: 0;
+      }
+
+      .timeline-content {
+        margin-left: 0;
+        width: 100%;
+        max-width: 600px;
+      }
+    }
+  }
+}

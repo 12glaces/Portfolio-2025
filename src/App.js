@@ -2,10 +2,9 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Nav/Nav";
 import Home from "./pages/Home/Home";
-const About = () => <div className="p-4 text-center text-xl">About Us</div>;
-const Services = () => <div className="p-4 text-center text-xl">Our Services</div>;
-const Contact = () => <div className="p-4 text-center text-xl">Contact Us</div>;
-
+import Services from "./pages/Services/Services";
+import Projects from "./pages/Projects/Projects";
+//Message to developers: I was heavily inspired by https://olaolu.dev/ so big thanks to him for the inspiration.
 const App = () => {
   return (
     <Router>
@@ -13,9 +12,9 @@ const App = () => {
       <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="*" element={<Home />} />
         </Routes>
       </div>
     </Router>
