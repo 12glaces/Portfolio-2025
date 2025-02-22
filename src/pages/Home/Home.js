@@ -18,12 +18,8 @@ const Home = () => {
         transition={{ duration: 0.8, ease: "easeOut" }}
         viewport={{ once: false }}
       >
-        <motion.div
+        <div
           className="text-xl font"
-          initial={{ opacity: 0, x: -50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-          viewport={{ once: false }}
         >
           <div className="w-max">
             <h1 className="animate-typing leading-3 overflow-hidden whitespace-nowrap border-r-4 border-transparent pr-5 text-5xl text-white font-bold">
@@ -35,7 +31,7 @@ const Home = () => {
             et sur mesure avec l’objectif d’offrir une expérience utilisateur au
             top.
           </p>
-        </motion.div>
+        </div>
         <div className="text-center douglas">
           <img src={Douglas} alt="Douglas Face" />
         </div>
