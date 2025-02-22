@@ -6,6 +6,7 @@ import Contact from "../../components/Contact/Contact";
 import Footer from "../../components/Footer/Footer";
 import AboutMe from "../../components/AboutMe/AboutMe";
 import Timeline from "../../components/Timeline/Timeline";
+import CallToAction from "../../components/CallToAction/CallToAction";
 
 const Home = () => {
   return (
@@ -25,7 +26,7 @@ const Home = () => {
           viewport={{ once: false }}
         >
           <div className="w-max">
-            <h1 className="animate-typing overflow-hidden whitespace-nowrap border-r-4 border-transparent pr-5 text-5xl text-white font-bold">
+            <h1 className="animate-typing leading-3 overflow-hidden whitespace-nowrap border-r-4 border-transparent pr-5 text-5xl text-white font-bold">
               Développeur Web.
             </h1>
           </div>
@@ -35,11 +36,9 @@ const Home = () => {
             top.
           </p>
         </motion.div>
-
         <div className="text-center douglas">
           <img src={Douglas} alt="Douglas Face" />
         </div>
-
         <motion.div
           className="font-2"
           initial={{ opacity: 0, y: 50 }}
@@ -57,7 +56,6 @@ const Home = () => {
           </p>
         </motion.div>
       </motion.div>
-
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -71,16 +69,21 @@ const Home = () => {
         </div>
         <AboutMe />
       </motion.div>
-      
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+        viewport={{ once: false }}
+      >
+        <CallToAction />
+      </motion.div>
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
         viewport={{ once: false }}
       ><Timeline />
-      </motion.div>
-      
-
+      </motion.div>  
       <motion.section
         id="contact"
         initial={{ opacity: 0, y: 50 }}
@@ -92,7 +95,6 @@ const Home = () => {
           <Contact />
         </div>
       </motion.section>
-
       <Footer />
     </div>
   );

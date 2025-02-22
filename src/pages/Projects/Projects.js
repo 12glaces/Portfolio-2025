@@ -24,14 +24,14 @@ const Projects = () => {
       title: "Site personnel",
       description:
         "Conception et développement d'un site personnel en React, intégrant Node.js et Express pour une gestion optimisée des services et des données. Ce projet reflète mon expertise en développement web moderne et mon souci du détail.",
-      technologies: ["React", "Node.js", "Express", "Scss"],
+      technologies: ["React", "Nodejs", "Express", "Scss"],
       imageUrl: me,
     },
     {
       title: "WorkplaceToBe",
       description:
         "Contribution à la création d’un add-in Outlook visant à faciliter la gestion des salles de réunion et des espaces de travail.",
-      technologies: ["TypeScript", "Scss", "Figma"],
+      technologies: ["TypeScript", "Scss", "Figma", "ViteJS"],
       imageUrl: sharing,
       client: "SharingCloud",
     },

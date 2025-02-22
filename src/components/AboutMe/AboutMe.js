@@ -20,7 +20,7 @@ const AboutMe = () => {
           <h1>Mon approche</h1>
           <p>
             Développer, c’est avant tout une histoire de logique et de fun. Mon
-            but ? Créer des apps qui tournent comme une horloge, tout en étant
+            but ? Créer des site qui tournent comme une horloge, tout en étant
             faciles à comprendre et à améliorer. Avec React sous le bras, je
             suis prêt à attaquer n’importe quel projet.
           </p>
@@ -37,7 +37,7 @@ const AboutMe = () => {
           <p>
             Alors, qu'est-ce que je fais ? Je passe mes journées à jongler entre
             React, TypeScript et ViteJS dans VSCode – mon terrain de jeu
-            préféré. Je gère tout ça sur GitHub avec le versioning, histoire de
+            préféré. Je gère tout ça sur GitHub, histoire de
             ne jamais perdre une ligne de code.
           </p>
         </motion.div>

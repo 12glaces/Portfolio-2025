@@ -11,10 +11,9 @@ section {
   place-self: center;
   padding: 50px;
   display: -webkit-flex;
-display: -moz-flex;
-display: flex;
-
-justify-content: center;
+  display: -moz-flex;
+  display: flex;
+  justify-content: center;
 }
 .scroll-down {
   justify-self: end;
@@ -67,6 +66,7 @@ justify-content: center;
   h1 {
     color: var(--primary-color);
     //border-color: var(--primary-color)!important;
+    line-height: 1.3;
   }
   .intro {
     background: linear-gradient(
@@ -97,6 +97,7 @@ justify-content: center;
     p {
       font-size: 1em;
       margin-bottom: 20px;
+      margin-right: 25px;
     }
 
     h1 {
@@ -187,15 +188,7 @@ justify-content: center;
   width: 100%;
 }
 
-
-@media screen and (max-width: 1200px) {
-  .font {
-    p {
-      max-width: 400px;
-    }
-  }
-}
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1300px) {
   .font {
     font-size: 1.2em !important;
     margin-left: 6vw;
@@ -217,7 +210,8 @@ justify-content: center;
   }
 }
 
-@media screen and (max-width: 800px) {
+
+@media screen and (max-width: 720px) {
   .scroll-down {
     border: 2px solid var(--accent-color);
   }
@@ -231,7 +225,6 @@ justify-content: center;
   .font-2 {
     font-size: 0.7em !important;
   }
-
   .font {
     font-size: 0.7em !important;
 
@@ -239,9 +232,7 @@ justify-content: center;
       width: 200px;
     }
   }
-}
-
-@media screen and (max-width: 720px) {
+  
   .pages-home {
     .intro {
       background: var(--accent-color);
@@ -252,6 +243,7 @@ justify-content: center;
     .font {
       padding-right: 0;
       padding: 150px 20px 60px 20px;
+      
       p {
         font-size: 1.3em;
         width: 100%;
