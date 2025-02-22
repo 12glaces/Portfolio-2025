@@ -1,0 +1,76 @@
+.services-page {
+  background-color: var(--background-color);
+  color: var(--primary-color);
+  padding-top: 100px;
+
+  .services-container {
+    padding: 50px;
+  }
+
+  .services-intro {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .services-intro h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+  }
+
+  .service-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+
+    .service-item {
+      background-color: var(--form-background);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: var(--shadow-light);
+      text-align: center; 
+
+      h2 {
+        font-size: 1.8em;
+        margin-bottom: 15px;
+      }
+
+      p {
+        font-size: 1em;
+        line-height: 1.6;
+      }
+
+      svg {
+        margin-bottom: 15px;
+      }
+
+      &:hover {
+        box-shadow: var(--shadow-dark);
+      }
+    }
+  }
+
+  .contact-button-container {
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  .contact-button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: var(--shadow-dark);
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    .service-list {
+      grid-template-columns: 1fr;
+    }
+  }
+}
