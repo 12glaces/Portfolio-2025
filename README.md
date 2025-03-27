@@ -79,6 +79,6 @@ Here’s how you can get in touch with me:
 - **Website:** (https://douglas-barlow.com/) 📧
 - **LinkedIn:** (https://www.linkedin.com/in/douglas-barlow-97656618a/) 💼
 - **GitHub:** (https://github.com/12glaces) 💻
-- **Twitter:** (https://twitter.com/12glaces) 🐦
+- **Twitter:** (https://twitter.com/12glace) 🐦
 
 Feel free to reach out—I’m always down to connect with cool people! 🤙
